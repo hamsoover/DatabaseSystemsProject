@@ -16,7 +16,6 @@ if(array_key_exists("rush_yd", $_GET))
 {
 	setcookie("rush_yd", $_GET["rush_yd"], time()+5*24*60*60, '/');
 	$_COOKIE["rush_yd"] = $_GET["rush_yd"];
-	echo $_COOKIE["rush_yd"];
 }
 
 if(array_key_exists("receiving_yd", $_GET))
@@ -81,8 +80,6 @@ Input Your Fantasy scoring system (leave blank for defaults):
 	</form>
 </div>
 
-<?php
-echo $_COOKIE["rush_yd"];
-?>
+
 </body>
 </html>

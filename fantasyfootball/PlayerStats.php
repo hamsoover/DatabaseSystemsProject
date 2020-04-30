@@ -11,7 +11,9 @@
 	<a href="TeamStats.php" class="w3-button w3-bar-item">Team Stats</a>
 	<a href="FantasyTeams.php" method = "post" class="w3-button w3-bar-item">Fantasy Teams</a>
 </nav>
-
+<?php
+if (isset($_COOKIE["rush_yd"])) { echo "COOKIE SET"; }
+?>
 <div>
 	<em>Search for a Player</em>
 	<form action="PlayerStats.php" method="post">
@@ -46,7 +48,6 @@
 		
 		if (array_key_exists("rush_yd", $_COOKIE))
 		{
-			echo "COOKIE EXISTS";
 			$rushpt = ($_COOKIE["rush_yd"] == "") ? 0.1 : $_COOKIE["rush_yd"];
 			$recpt = ($_COOKIE["receiving_yd"] == "") ? 0.1 : $_COOKIE["receiving_yd"];
 			$ppr = ($_COOKIE["ppr"] == "") ? 0 : $_COOKIE["ppr"];
@@ -57,7 +58,6 @@
 		}
 		else
 		{
-			echo "COOKIE DOES NOT EXIST";
 			$rushpt = 0.1;
 			$recpt = 0.1;
 			$ppr = 0;

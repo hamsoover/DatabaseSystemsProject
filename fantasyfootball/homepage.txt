@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<body>
+
+<h1>Fantasy Football Tracker</h1>
+<nav class="w3-bar w3-black">
+	<a href="#home" class="w3-button w3-bar-item">Home</a>
+	<a href="#team" class="w3-button w3-bar-item">Team Stats</a>
+	<a href="#player" class="w3-button w3-bar-item">Player Stats</a>
+	<a href="#fantasy" class="w3-button w3-bar-item">Fantasy Teams</a>
+</nav>
+
+<div>
+<?php "<p>Hello World!</p>"; ?>
+
+This is some text.
+</div>
+
+<?php
+if(array_key_exists("
+
+
+
+
+?>
+</body>
+</html>

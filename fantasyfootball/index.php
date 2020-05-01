@@ -11,44 +11,55 @@ mysqli_close($connect);
 
 <!DOCTYPE html>
 
+
 <?php
+session_start();
 if(array_key_exists("rush_yd", $_GET))
 {
-	setcookie("rush_yd", $_GET["rush_yd"], time()+5*24*60*60, '/');
-	$_COOKIE["rush_yd"] = $_GET["rush_yd"];
+	//$cookieout["rush_yd"] = $_GET["rush_yd"];
+	//setcookie("rush_yd", $_GET["rush_yd"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["rush_yd"] = $_GET["rush_yd"];
 }
 
 if(array_key_exists("receiving_yd", $_GET))
 {
-	setcookie("receiving_yd", $_GET["receiving_yd"], time()+5*24*60*60, '/');
-	$_COOKIE["receiving_yd"] = $_GET["receiving_yd"];
+	//$cookieout["receiving_yd"] = $_GET["receiving_yd"];
+	//setcookie("receiving_yd", $_GET["receiving_yd"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["receiving_yd"] = $_GET["receiving_yd"];
+	//echo $_COOKIE["receiving_yd"];
 }
 
 if(array_key_exists("ppr", $_GET))
 {
-	setcookie("ppr", $_GET["ppr"], time()+5*24*60*60, '/');
-	$_COOKIE["ppr"] = $_GET["ppr"];
+	//$cookieout["ppr"] = $_GET["ppr"];
+	//setcookie("ppr", $_GET["ppr"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["ppr"] = $_GET["ppr"];
 }
 if(array_key_exists("pass_yd", $_GET))
 {
-	setcookie("pass_yd", $_GET["pass_yd"], time()+5*24*60*60, '/');
-	$_COOKIE["pass_yd"] = $_GET["pass_yd"];
+	//$cookieout["pass_yd"] = $_GET["pass_yd"];
+	//setcookie("pass_yd", $_GET["pass_yd"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["pass_yd"] = $_GET["pass_yd"];
 }
 if(array_key_exists("completion", $_GET))
 {
-	setcookie("completion", $_GET["completion"], time()+5*24*60*60, '/');
-	$_COOKIE["completion"] = $_GET["completion"];
+	//$cookieout["completion"] = $_GET["completion"];
+	//setcookie("completion", $_GET["completion"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["completion"] = $_GET["completion"];
 }
 if(array_key_exists("tds", $_GET))
 {
-	setcookie("tds", $_GET["tds"], time()+5*24*60*60, '/');
-	$_COOKIE["tds"] = $_GET["tds"];
+	//$cookieout["tds"] = $_GET["tds"];
+	//setcookie("tds", $_GET["tds"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["tds"] = $_GET["tds"];
 }
 if(array_key_exists("int", $_GET))
 {
-	setcookie("int", $_GET["int"], time()+5*24*60*60, '/');
-	$_COOKIE["int"] = $_GET["int"];
+	//$cookieout["int"] = $_GET["int"];
+	//setcookie("int", $_GET["int"], time()+5*24*60*60, '/fantasyfootball/');
+	$_SESSION["int"] = $_GET["int"];
 }
+//setcookie("stats", $cookieout, time()+5*24*60*60, '/fantasyfootball/');
 ?>
 <html>
 <meta charset="UTF-8">

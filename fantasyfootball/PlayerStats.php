@@ -12,7 +12,6 @@
 	<a href="FantasyTeams.php" method = "post" class="w3-button w3-bar-item">Fantasy Teams</a>
 </nav>
 <?php
-if (isset($_COOKIE["rush_yd"])) { echo "COOKIE SET"; }
 ?>
 <div>
 	<em>Search for a Player</em>
@@ -27,6 +26,7 @@ if (isset($_COOKIE["rush_yd"])) { echo "COOKIE SET"; }
 </div>
 
 <?php
+	session_start();
 	/*
 	$usernumber= $_POST['username'];
 	if($username)
@@ -46,15 +46,15 @@ if (isset($_COOKIE["rush_yd"])) { echo "COOKIE SET"; }
 	{
 		global $connect;
 		
-		if (array_key_exists("rush_yd", $_COOKIE))
+		if (array_key_exists("rush_yd", $_SESSION))
 		{
-			$rushpt = ($_COOKIE["rush_yd"] == "") ? 0.1 : $_COOKIE["rush_yd"];
-			$recpt = ($_COOKIE["receiving_yd"] == "") ? 0.1 : $_COOKIE["receiving_yd"];
-			$ppr = ($_COOKIE["ppr"] == "") ? 0 : $_COOKIE["ppr"];
-			$passpt = ($_COOKIE["pass_yd"] == "") ? 0.04 : $_COOKIE["pass_yd"];
-			$comppt = ($_COOKIE["completion"] == "") ? 0 : $_COOKIE["completion"];
-			$tdpt = ($_COOKIE["completion"] == "") ? 6 : $_COOKIE["completion"];
-			$intpt = ($_COOKIE["int"] == "") ? -2 : $_COOKIE["int"];
+			$rushpt = ($_SESSION["rush_yd"] == "") ? 0.1 : $_SESSION["rush_yd"];
+			$recpt = ($_SESSION["receiving_yd"] == "") ? 0.1 : $_SESSION["receiving_yd"];
+			$ppr = ($_SESSION["ppr"] == "") ? 0 : $_SESSION["ppr"];
+			$passpt = ($_SESSION["pass_yd"] == "") ? 0.04 : $_SESSION["pass_yd"];
+			$comppt = ($_SESSION["completion"] == "") ? 0 : $_SESSION["completion"];
+			$tdpt = ($_SESSION["tds"] == "") ? 6 : $_SESSION["tds"];
+			$intpt = ($_SESSION["int"] == "") ? -2 : $_SESSION["int"];
 		}
 		else
 		{
